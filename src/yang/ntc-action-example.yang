@@ -1,0 +1,36 @@
+module ntc-action-example {
+
+  namespace "http://networktocode.com/ntc-action-example";
+  prefix ntc-action-example;
+
+  import tailf-common {
+    prefix tailf;
+  }
+  import tailf-ncs {
+    prefix ncs;
+  }
+
+  description
+    "An action example";
+
+  revision 2019-09-12 {
+    description
+      "Giving some details for an action example.";
+  }
+
+  container action {
+    tailf:action random-norris-joke {
+      tailf:actionpoint ntc-action-example-action;
+      input {
+        leaf number-of-jokes {
+          type uint8;
+        }
+      }
+      output {
+        leaf result {
+          type string;
+        }
+      }
+    }
+  }
+}
