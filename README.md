@@ -1,3 +1,5 @@
+Make a package without a service blog
+
 ```
 packages$ ncs-make-package --help
 Usage: ncs-make-package [options] package-name
